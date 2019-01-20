@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+<head>
+<title>Thymeleaf Time</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		
+		<main role="main">
+
+			<form th:action="@{/asciiform}" th:object="${command}" method="post">
+
+			
+
+			  <section class="jumbotron text-center">
+			    <div class="container">
+			      <h1 class="jumbotron-heading">ASCII ART Generator</h1>
+			      <p class="lead text-muted">
+			      Enter Text: <input type="text" id="textAsciiId" th:field="*{textAscii}" />
+			      <span th:if="${#fields.hasErrors('textAscii')}" class="help-block text-danger" th:errors="*{textAscii}"></span>
+			      </p>
+			      <p class="lead text-muted"> Select Print Value:
+			      <select th:field="*{designPrintValue}">
+					  <option 
+					      th:each="dropdownValue: ${selectDesignPrintValue}"
+					      th:value="${dropdownValue}"
+					      th:text="${dropdownValue}" ></option>
+					</select>
+			      </p>
+			      <p>
+			      <input type="submit" value="Submit" class="btn btn-primary my-2"/> 
+			      <input type="button" value="Reset" class="btn btn-secondary my-2" onclick="customReset();"/>
+			      </p>
+			    </div>
+			  </section>
+			
+			  <div class="album py-5 text-center">
+			    <div class="container">
+			    
+			
+			
+			<th:block th:if="${command.textareaAscii} == null">
+			      <div class="row text-left">
+			        
+			        
+					<p class="lead text-muted">
+					1. Enter the text <br>
+					2. Select printing character <br>
+					3. Click on submit</p>
+					
+					
+			        
+			      </div>
+			      
+			</th:block> 
+			
+			<th:block th:if="${command.textareaAscii} != null">
+			      <div class="row">
+			        
+			        
+					<h1>ASCII ART</h1>	
+					<div  style="overflow: auto; width:100%; height:100%;border: 1px solid">
+			    <table>
+			      <tr th:each="row: ${command.textareaAscii}">
+				    <td th:each="value: ${row}" th:text="${value}" />
+				    </tr>
+				</table>
+			      </div>
+			        
+			      </div>
+			      
+			</th:block> 
+			      
+			      
+			     
+			      
+				
+			      
+			    </div>
+			  </div>
+			  
+			 </form>
+
+</main>
+		
+		
+		
+	</div>
+	
+	
+	
+	
+	
+</body>
+
+</html>

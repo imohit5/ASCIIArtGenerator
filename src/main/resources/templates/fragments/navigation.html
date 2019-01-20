@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Header</title>
+</head>
+
+<body>
+
+	<div th:fragment="navigation">
+
+		<div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Links</h4>
+          
+          <p><a href="https://www.mi9dev.com" target="_blank">www.mi9dev.com</a></p>
+	    <p><a href="https://blog.mi9dev.com" target="_blank">blog.mi9dev.com</a></p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Github</a></li>
+            <li><a href="#" class="text-white">Twitter</a></li>
+            <li><a href="#" class="text-white">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+        <strong>ASCII ART</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+	</div>
+
+</body>
+
+</html>

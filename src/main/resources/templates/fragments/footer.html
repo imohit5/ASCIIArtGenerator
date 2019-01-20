@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Header</title>
+</head>
+
+<body>
+
+	<footer class="text-muted pt-5 pb-5 bg-light" th:fragment="footer">
+	  <div class="container">
+	    <p class="float-right">
+	      <a href="#">[^]</a>
+	    </p>
+	    <h4 class="text-black">ABOUT</h4>
+	    <p class="text-muted">
+          	MOHIT INAMPUDI <br>
+          	@Software Developer <br>
+			#MI9DEV
+          </p>
+	  </div>
+	
+		<script th:src="@{webjars/jquery/3.0.0/jquery.min.js}"></script>
+		<script th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+		
+		<script>
+		function customReset()
+		{
+			document.getElementById("textAsciiId").value = "";
+		}
+	</script>
+		
+	</footer>
+
+
+</body>
+
+</html>
