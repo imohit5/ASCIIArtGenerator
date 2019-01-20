@@ -48,7 +48,6 @@ public class ASCIIArtServiceImpl implements ASCIIArtService {
             RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
     graphics.drawString(string, 0, 25);
 
-    ImageIO.write(image, "png", new File("/Users/Inampudi/Desktop/ascii-art.png"));
 
     String[][] myArray = new String[height][width];
 
